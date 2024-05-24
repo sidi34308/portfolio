@@ -11,7 +11,15 @@ body {
 
 }
 
+::selection {
+  background-color: #2bc2b0;
+  /* Yellow */
+  color: #fff;
+  /* Dark gray */
+}
+
 header nav {
+  z-index: 1000;
   display: flex;
   justify-content: center;
 
@@ -47,7 +55,7 @@ header nav ul li:hover {
 
 header nav ul li:last-child {
   color: #ffff;
-  font-weight: semibold;
+
   background: #31C2B2;
 
   padding: 0.8rem;
@@ -76,8 +84,22 @@ header nav ul li:last-child {
   color: #595959;
   text-align: center;
   margin-top: 1rem;
-  line-height: 1.1;
+  line-height: 1;
   font-weight: 500;
+}
+
+.paragraph {
+  color: #595959;
+  margin-top: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.background {
+  background-image: url("/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .primary_btn {
@@ -91,18 +113,58 @@ header nav ul li:last-child {
 }
 
 .secondary_btn {
+
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #000000;
   font-weight: 500;
   padding: 1rem;
   border-radius: 68px;
-  background: #3151C2;
+  background: #ffffff;
 }
 
 .hero .btns {
   margin: 1rem;
   display: flex;
   gap: 0.5rem;
+}
+
+.cards {
+  background-color: #ffffff;
+  border-radius: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cards:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.projectimg {
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  padding: 1rem;
+  /* Adjust the gap between icons as needed */
+}
+
+.tech-icons img {
+  height: 3rem;
+  /* Set the desired height */
+  width: auto;
+  /* Automatically adjusts the width to maintain aspect ratio */
+  padding: 0.4rem;
+  background-color: #f6f6f6;
+  border-radius: 20%;
+  object-fit: contain;
+  /* Ensures the image is contained within the given dimensions */
 }
 
 

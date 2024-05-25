@@ -11,11 +11,11 @@ const Card = ({ image, title, description, techIcons, liveSiteLink }) => {
             </div>
             <div className=" tech-icons ">
                 {techIcons.map((icon, index) => (
-                    <img key={index} src={icon} alt="tech-icon" className=" " />
+                    <img key={index} src={icon} alt="tech-icon" className="bg-white rounded-full border border-neutral-200 " style={{ transform: `translateX(-${5 * index * 2}px)` }} />
                 ))}
             </div>
-            <div className=" px-6 pt-4 pb-2">
-                <a href={liveSiteLink} className="text-teal-500 hover:text-teal-600 font-semibold" target="_blank" rel="noopener noreferrer">
+            <div className=" px-6 pt-4 pb-4">
+                <a href={liveSiteLink} className="text-teal-500 hover:text-teal-600 font-semibold " target="_blank" rel="noopener noreferrer">
                     Check Live Site &rarr;
                 </a>
             </div>
